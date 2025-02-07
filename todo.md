@@ -1,6 +1,5 @@
 # open todos
 
-- domain language
 - init game of tic tac toe
 - make moves
 - make valid moves
@@ -12,6 +11,7 @@
 # done
 
 - init project :)
+- domain language
 
 # domain language
 
