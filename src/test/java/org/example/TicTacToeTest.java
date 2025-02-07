@@ -48,6 +48,13 @@ class TicTacToeTest {
         assertThat(actual).isEqualTo(expectedWinner);
     }
 
+    @Test
+    void getNoWinner() {
+        var actual = getWinner();
+
+        assertThat(actual).isEqualTo(' ');
+    }
+
     private char getWinner() {
         List<List<Integer>> winningMask = List.of(
                 List.of(0, 1, 2), List.of(3, 4, 5), List.of(6, 7, 8), // horizontal
