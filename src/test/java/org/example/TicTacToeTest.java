@@ -27,7 +27,7 @@ class TicTacToeTest {
     }
 
     @Test
-    public void makeFirstMove() {
+    public void makeTwoMoves() {
         move(5);
         move(7);
 
