@@ -42,4 +42,16 @@ public class TicTacToe {
         moves.add(field);
     }
 
+    public char[] getState() {
+        char[] state = new char[9];
+        for (int i = 0; i < state.length; i++) {
+            if (moves.contains(i)) {
+                state[i] = moves.indexOf(i) % 2 == 0 ? 'X' : 'O';
+            } else {
+                state[i] = ' ';
+            }
+        }
+        return state;
+    }
+    
 }

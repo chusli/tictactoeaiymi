@@ -23,6 +23,16 @@ class TicTacToeTest {
         );
     }
 
+    public static Stream<Arguments> provideValidStates() {
+        return Stream.of(
+                arguments(List.of(), new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}),
+                arguments(List.of(6), new char[]{' ', ' ', ' ', ' ', ' ', ' ', 'X', ' ', ' '}),
+                arguments(List.of(0, 1), new char[]{'X', 'O', ' ', ' ', ' ', ' ', ' ', ' ', ' '}),
+                arguments(List.of(1, 0), new char[]{'O', 'X', ' ', ' ', ' ', ' ', ' ', ' ', ' '}),
+                arguments(List.of(0, 3, 8), new char[]{'X', ' ', ' ', 'O', ' ', ' ', ' ', ' ', 'X'})
+        );
+    }
+
     @ParameterizedTest
     @MethodSource("provideWinningScenarios")
     void winnigScenarios(List<Integer> moves, char expectedWinner) {
@@ -56,6 +66,17 @@ class TicTacToeTest {
         char actual = tictactoe.getWinner();
 
         assertThat(actual).isEqualTo('X');
+    }
+
+    @ParameterizedTest
+    @MethodSource("provideValidStates")
+    void valid_state(List<Integer> moves, char[] expectedState) {
+        TicTacToe tictactoe = new TicTacToe();
+        moves.forEach(tictactoe::move);
+
+        char[] actual = tictactoe.getState();
+
+        assertThat(actual).containsExactly(expectedState);
     }
 
 }
