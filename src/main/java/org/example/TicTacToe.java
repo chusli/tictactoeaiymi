@@ -35,10 +35,6 @@ public class TicTacToe {
         return ' ';
     }
 
-    public char getState(int field) {
-        return moves.indexOf(field) % 2 == 0 ? 'X' : 'O';
-    }
-
     public void move(int field) {
         moves.add(field);
     }

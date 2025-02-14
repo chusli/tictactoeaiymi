@@ -23,19 +23,6 @@ class TicTacToeTest {
         );
     }
 
-    @Test
-    public void makeTwoMoves() {
-        TicTacToe tictactoe = new TicTacToe();
-        tictactoe.move(5);
-        tictactoe.move(7);
-
-        char actual = tictactoe.getState(5);
-        assertThat(actual).isEqualTo('X');
-
-        char actual2 = tictactoe.getState(7);
-        assertThat(actual2).isEqualTo('O');
-    }
-
     @ParameterizedTest
     @MethodSource("provideWinningScenarios")
     void winnigScenarios(List<Integer> moves, char expectedWinner) {
