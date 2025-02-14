@@ -42,4 +42,20 @@ class TicTacToeTest {
         assertThat(actual).isEqualTo(' ');
     }
 
+    @Test
+    void ignoreInvalidMove() {
+        TicTacToe tictactoe = new TicTacToe();
+        tictactoe.move(0);
+        tictactoe.move(0); // this move must be ignored
+        tictactoe.move(3); // valid move of player 2
+
+        tictactoe.move(1);
+        tictactoe.move(4);
+        tictactoe.move(2); // winning move
+
+        char actual = tictactoe.getWinner();
+
+        assertThat(actual).isEqualTo('X');
+    }
+
 }

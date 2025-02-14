@@ -36,6 +36,9 @@ public class TicTacToe {
     }
 
     public void move(int field) {
+        if (moves.contains(field)) {
+            return;
+        }
         moves.add(field);
     }
 
