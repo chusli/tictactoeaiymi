@@ -42,7 +42,7 @@ class TicTacToeTest {
         TicTacToe tictactoe = new TicTacToe();
         moves.forEach(tictactoe::move);
 
-        var actual = tictactoe.getWinner();
+        char actual = tictactoe.getWinner();
 
         assertThat(actual).isEqualTo(expectedWinner);
     }
@@ -50,7 +50,7 @@ class TicTacToeTest {
     @Test
     void getNoWinner() {
         TicTacToe tictactoe = new TicTacToe();
-        var actual = tictactoe.getWinner();
+        char actual = tictactoe.getWinner();
 
         assertThat(actual).isEqualTo(' ');
     }
