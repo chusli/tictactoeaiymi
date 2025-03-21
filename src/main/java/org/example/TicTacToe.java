@@ -53,5 +53,17 @@ public class TicTacToe {
         }
         return state;
     }
-    
+
+    public List<String> print() {
+        char[] state = getState();
+        return List.of(
+                "%s|%s|%s".formatted(state[0], state[1], state[2]),
+                "______",
+                "%s|%s|%s".formatted(state[3], state[4], state[5]),
+                "______",
+                "%s|%s|%s".formatted(state[6], state[7], state[8])
+        );
+
+    }
+
 }

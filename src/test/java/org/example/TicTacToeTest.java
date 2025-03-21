@@ -79,4 +79,18 @@ class TicTacToeTest {
         assertThat(actual).containsExactly(expectedState);
     }
 
+    @Test
+    void printShowsIntialGame() {
+        TicTacToe ticTacToe = new TicTacToe();
+
+        List<String> actual = ticTacToe.print();
+
+        assertThat(actual).containsExactly(" | | ",
+                "______",
+                " | | ",
+                "______",
+                " | | "
+        );
+    }
+
 }
