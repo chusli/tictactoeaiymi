@@ -14,7 +14,7 @@ Code Snippet shouldn't be more then 10 Lines of Code.
 Delete the Word 'Damir'.
 
 ``` java
-register("");
+register("Damir");
 ```
 
 | WHAT                | HOW                           |
@@ -35,45 +35,42 @@ Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29,
 Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz"""
 ```
 
-| WHAT                      | HOW |
-|---------------------------|-----|
-| enter command line        | /   |
-| search and replace syntax | :   |
-| ...                       | ... |
+| WHAT            | HOW        |
+|-----------------|------------|
+| command mode    | :          |
+| replace         | %s         |
+| search replace  | /fiss/fizz |
+| modifier global | /g         |
 
 ## Example-3
 
 @
-<Describe your Refactoring Goal>
+Rename method
 
 ``` <Programming Language>
-Code Snippet
-..
-Code Snippet
+void main(String... args)
 ```
 
-| WHAT | HOW |
-|------|-----|
-| ...  | ... |
-| ...  | ... |
-| ...  | ... |
+| WHAT                     | HOW                     |
+|--------------------------|-------------------------|
+| goto method              | /main(                  |
+| rename (IntelliJ Hotkey) | Shift + F6              |
+| type new name            | type <kbd>newName</kbd> |
+| confirm                  | <kbd>Enter</kbd>        |
 
 ## Example-4
 
 @
-<Describe your Refactoring Goal>
+Move block
 
-``` <Programming Language>
-Code Snippet
-..
-Code Snippet
-```
-
-| WHAT | HOW |
-|------|-----|
-| ...  | ... |
-| ...  | ... |
-| ...  | ... |
+| WHAT          | HOW                                    |
+|---------------|----------------------------------------|
+| goto line 32  | <kbd>32</kbd><kbd>g</kbd><kbd>g</kbd>  |
+| visual mode   | <kbd>v</kbd>                           |
+| goto line 64  | <kbd>64</kbd><kbd>g</kbd><kbd>g</kbd>  |
+| remove block  | <kbd>d</kbd>                           |
+| goto line 128 | <kbd>128</kbd><kbd>g</kbd><kbd>g</kbd> |
+| insert block  | <kbd>p</kbd>                           |
 
 ## Example-5
 
