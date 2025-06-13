@@ -61,7 +61,7 @@ void main(String... args)
 ## Example-4
 
 @
-Move block
+Move block (cut and paste block)
 
 | WHAT          | HOW                                    |
 |---------------|----------------------------------------|
@@ -75,36 +75,45 @@ Move block
 ## Example-5
 
 @
-<Describe your Refactoring Goal>
+Inline Code
 
-``` <Programming Language>
-Code Snippet
-..
-Code Snippet
+``` Python
+name = get_user_name()
+print(f"Hello, {name}")
 ```
 
-| WHAT | HOW |
-|------|-----|
-| ...  | ... |
-| ...  | ... |
-| ...  | ... |
+| WHAT              | HOW                                     |
+|-------------------|-----------------------------------------|
+| Gehe zu           | /name =                                 |
+| Bewege Cursor     | get_user_name()                         |
+| Yank inner word   | <kbd>y</kbd><kbd>i</kbd><kbd>w</kbd>    |
+| Gehe zu           | /print                                  |
+| Bewege Cursor     | name                                    |
+| Change inner word | <kbd>c</kbd><kbd>i</kbd><kbd>w</kbd>    |
+| Insert yank       | <kbd>CTRL</kbd><kbd>r</kbd><kbd>"</kbd> |
+| Gehe zu           | /name =                                 |
+| löschen           | <kbd>dd</kbd>                           |
 
 ## Example-6
 
 @
-<Describe your Refactoring Goal>
+use macro to record and replay some key-sequences. example: add comment // at start of the nextd 4 lines
 
 ``` <Programming Language>
-Code Snippet
-..
-Code Snippet
+print("Hello")
+print("Foo")
+print("Bar")
+print("Test1")
+print("Test2")
 ```
 
-| WHAT | HOW |
-|------|-----|
-| ...  | ... |
-| ...  | ... |
-| ...  | ... |
+| WHAT                                | HOW                                                  |
+|-------------------------------------|------------------------------------------------------|
+| move cursor where you want to start |                                                      |
+| start record with 'q' for slot 'w'  | <kbd>qw</kbd>                                        |
+| type macro                          | <kbd>i</kbd><kbd>//</kbd><kbd>ESC</kbd><kbd>j0</kbd> |
+| end recording                       | <kbd>q</kbd>                                         |
+| execute macro 4 times               | <kbd>4</kbd><kbd>@</kbd><kbd>w</kbd>                 |
 
 ## Example-7
 
